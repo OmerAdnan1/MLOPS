@@ -2,3 +2,5 @@
 .dvc/tmp/
 .dvc/config.local
 *.h5
+/models
+/reports
