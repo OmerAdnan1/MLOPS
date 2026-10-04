@@ -12,7 +12,14 @@ env/
 .ipynb_checkpoints/
 
 # Machine-learning outputs
-data/
-models/
 artifacts/
 logs/
+
+# Python cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
