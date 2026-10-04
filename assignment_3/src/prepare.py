@@ -22,3 +22,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Temporary note: validation is split from the training data.
+# Raw arrays preserve the original dataset values.
