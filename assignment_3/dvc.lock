@@ -21,36 +21,6 @@ stages:
       md5: 23b0000338669d2c61217dbd94633aa0.dir
       size: 54950512
       nfiles: 4
-  preprocess:
-    cmd: uv run python src/preprocess.py
-    deps:
-    - path: data/raw
-      hash: md5
-      md5: 23b0000338669d2c61217dbd94633aa0.dir
-      size: 54950512
-      nfiles: 4
-    - path: pyproject.toml
-      hash: md5
-      md5: 482ba0d34f7a646c4cc8f697d427462c
-      size: 346
-    - path: src/preprocess.py
-      hash: md5
-      md5: dc9430bb4052564e6e7502bac9221af5
-      size: 1592
-    - path: uv.lock
-      hash: md5
-      md5: f97eb41c8c0a0b476c7942be12df1928
-      size: 570101
-    params:
-      params.yaml:
-        preprocess.seed: 42
-        preprocess.test_size: 0.2
-    outs:
-    - path: data/processed
-      hash: md5
-      md5: eeb8cf242a713e05d8e689a1ad558025.dir
-      size: 219590768
-      nfiles: 6
   train:
     cmd: uv run python src/train.py
     deps:
