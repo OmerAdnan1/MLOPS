@@ -1,0 +1,54 @@
+stages:
+  prepare:
+    cmd: uv run python src/prepare.py
+    deps:
+      - src/prepare.py
+      - pyproject.toml
+      - uv.lock
+    outs:
+      - data/raw
+
+  preprocess:
+    cmd: uv run python src/preprocess.py
+    deps:
+      - src/preprocess.py
+      - data/raw
+      - pyproject.toml
+      - uv.lock
+    params:
+      - preprocess.test_size
+      - preprocess.seed
+    outs:
+      - data/processed
+
+  train:
+    cmd: uv run python src/train.py
+    deps:
+      - src/train.py
+      - data/processed
+      - pyproject.toml
+      - uv.lock
+    params:
+      - train.dense_units
+      - train.dropout_rate
+      - train.learning_rate
+      - train.epochs
+      - train.batch_size
+      - train.seed
+    outs:
+      - models
+
+  evaluate:
+    cmd: uv run python src/evaluate.py
+    deps:
+      - src/evaluate.py
+      - models/model.h5
+      - data/processed/x_test.npy
+      - data/processed/y_test.npy
+      - pyproject.toml
+      - uv.lock
+    outs:
+      - reports
+    metrics:
+      - metrics.json:
+          cache: false
