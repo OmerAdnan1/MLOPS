@@ -74,7 +74,7 @@ stages:
     params:
       params.yaml:
         train.batch_size: 128
-        train.dense_units: 128
+        train.dense_units: 256
         train.dropout_rate: 0.2
         train.epochs: 20
         train.learning_rate: 0.001
@@ -82,8 +82,8 @@ stages:
     outs:
     - path: models
       hash: md5
-      md5: 172dccfdc56a3395d35a26ab28ee3363.dir
-      size: 1246916
+      md5: 7a82a2a8c73bf5fd641878e4edb4f438.dir
+      size: 2468548
       nfiles: 2
   evaluate:
     cmd: uv run python src/evaluate.py
@@ -98,8 +98,8 @@ stages:
       size: 10128
     - path: models/model.h5
       hash: md5
-      md5: d532de29428b7b745d8300b233473568
-      size: 1245272
+      md5: b514b8bb24ccb53d837f97d115a12f94
+      size: 2466904
     - path: pyproject.toml
       hash: md5
       md5: 482ba0d34f7a646c4cc8f697d427462c
@@ -115,10 +115,10 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: 72c718ecda314eba4198bb04ed9880ac
-      size: 107
+      md5: 47d7f79f485a579c4b4515dd4d967062
+      size: 108
     - path: reports
       hash: md5
-      md5: 818806f2b3fe675b2c5be6d3db303f47.dir
-      size: 100233
+      md5: bedc187f2176c2f2a7086572865e6056.dir
+      size: 100665
       nfiles: 2
