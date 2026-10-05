@@ -20,6 +20,8 @@ The final model meets the assignment's 85% accuracy target. The original 60,000 
 
 `params.yaml` supplies the validation fraction, seeds and training hyperparameters. `dvc.yaml` declares the stage graph; `dvc.lock` records the executed parameters and artifact hashes. `uv.lock` records the environment and is tracked as a stage dependency.
 
+Python sources use explicit LF line endings through `.gitattributes`, preventing Windows branch switches from changing DVC dependency hashes without a code change.
+
 ## Reproduce
 
 Install uv, clone the repository, and run these commands from the repository root:

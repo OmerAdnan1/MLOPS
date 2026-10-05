@@ -1,0 +1,116 @@
+Command: uv run dvc repro
+Working directory: C:\Work\uni\MLOPS\assignment_3
+Exit code: 0
+
+Running stage 'prepare':
+> uv run python src/prepare.py
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791181561.678133   14300 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791181567.649951   14300 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Raw Fashion-MNIST data saved.
+Training images: (60000, 28, 28)
+Testing images: (10000, 28, 28)
+Updating lock file 'dvc.lock'
+
+Running stage 'preprocess':
+> uv run python src/preprocess.py
+Training images: (48000, 28, 28)
+Validation images: (12000, 28, 28)
+Test images: (10000, 28, 28)
+Processed image range: 0.0 to 1.0
+Updating lock file 'dvc.lock'
+
+Running stage 'train':
+> uv run python src/train.py
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791181578.845770   31192 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Model: "sequential"
++--------------------------------------------------------------------------+
+| Layer (type)                    | Output Shape           |       Param # |
+|---------------------------------+------------------------+---------------|
+| flatten (Flatten)               | (None, 784)            |             0 |
+|---------------------------------+------------------------+---------------|
+| dense (Dense)                   | (None, 256)            |       200,960 |
+|---------------------------------+------------------------+---------------|
+| dropout (Dropout)               | (None, 256)            |             0 |
+|---------------------------------+------------------------+---------------|
+| dense_1 (Dense)                 | (None, 10)             |         2,570 |
++--------------------------------------------------------------------------+
+ Total params: 203,530 (795.04 KB)
+ Trainable params: 203,530 (795.04 KB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/20
+W0000 00:00:1791181579.074304   31192 cpu_allocator_impl.cc:82] Allocation of 150528000 exceeds 10% of free system memory.
+E0000 00:00:1791181582.317042   31192 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+375/375 - 4s - 10ms/step - accuracy: 0.7939 - loss: 0.5926 - val_accuracy: 0.8422 - val_loss: 0.4407
+Epoch 2/20
+375/375 - 5s - 13ms/step - accuracy: 0.8508 - loss: 0.4190 - val_accuracy: 0.8643 - val_loss: 0.3779
+Epoch 3/20
+375/375 - 3s - 7ms/step - accuracy: 0.8643 - loss: 0.3759 - val_accuracy: 0.8723 - val_loss: 0.3504
+Epoch 4/20
+375/375 - 3s - 7ms/step - accuracy: 0.8727 - loss: 0.3492 - val_accuracy: 0.8757 - val_loss: 0.3425
+Epoch 5/20
+375/375 - 5s - 13ms/step - accuracy: 0.8792 - loss: 0.3313 - val_accuracy: 0.8833 - val_loss: 0.3249
+Epoch 6/20
+375/375 - 2s - 7ms/step - accuracy: 0.8843 - loss: 0.3156 - val_accuracy: 0.8865 - val_loss: 0.3153
+Epoch 7/20
+375/375 - 2s - 5ms/step - accuracy: 0.8879 - loss: 0.3027 - val_accuracy: 0.8882 - val_loss: 0.3087
+Epoch 8/20
+375/375 - 3s - 9ms/step - accuracy: 0.8925 - loss: 0.2905 - val_accuracy: 0.8880 - val_loss: 0.3088
+Epoch 9/20
+375/375 - 5s - 13ms/step - accuracy: 0.8962 - loss: 0.2792 - val_accuracy: 0.8910 - val_loss: 0.3078
+Epoch 10/20
+375/375 - 3s - 7ms/step - accuracy: 0.8984 - loss: 0.2740 - val_accuracy: 0.8895 - val_loss: 0.3074
+Epoch 11/20
+375/375 - 3s - 7ms/step - accuracy: 0.9001 - loss: 0.2662 - val_accuracy: 0.8917 - val_loss: 0.3072
+Epoch 12/20
+375/375 - 5s - 14ms/step - accuracy: 0.9036 - loss: 0.2584 - val_accuracy: 0.8910 - val_loss: 0.3029
+Epoch 13/20
+375/375 - 3s - 7ms/step - accuracy: 0.9068 - loss: 0.2505 - val_accuracy: 0.8931 - val_loss: 0.3024
+Epoch 14/20
+375/375 - 3s - 7ms/step - accuracy: 0.9089 - loss: 0.2441 - val_accuracy: 0.8912 - val_loss: 0.3097
+Epoch 15/20
+375/375 - 3s - 7ms/step - accuracy: 0.9115 - loss: 0.2374 - val_accuracy: 0.8953 - val_loss: 0.3000
+Epoch 16/20
+375/375 - 5s - 13ms/step - accuracy: 0.9120 - loss: 0.2323 - val_accuracy: 0.8963 - val_loss: 0.3003
+Epoch 17/20
+375/375 - 3s - 7ms/step - accuracy: 0.9159 - loss: 0.2257 - val_accuracy: 0.8962 - val_loss: 0.2992
+Epoch 18/20
+375/375 - 2s - 6ms/step - accuracy: 0.9178 - loss: 0.2207 - val_accuracy: 0.8977 - val_loss: 0.2997
+Epoch 19/20
+375/375 - 3s - 7ms/step - accuracy: 0.9182 - loss: 0.2172 - val_accuracy: 0.8983 - val_loss: 0.2955
+Epoch 20/20
+375/375 - 3s - 7ms/step - accuracy: 0.9211 - loss: 0.2125 - val_accuracy: 0.8969 - val_loss: 0.3023
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+Saved models/model.h5 and models/history.csv
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate':
+> uv run python src/evaluate.py
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791181649.056142   27352 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791181651.169740   27352 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791181652.567236   27352 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+{
+  "test_loss": 0.34088870882987976,
+  "test_accuracy": 0.8842999935150146,
+  "test_samples": 10000
+}
+
+Saved reports/confusion_matrix.png
+Updating lock file 'dvc.lock'
+
+To track the changes with git, run:
+
+	git add dvc.lock
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Use `dvc push` to send your updates to remote storage.

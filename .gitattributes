@@ -1,4 +1,5 @@
 *.pdf binary
 *.png binary
+*.py text eol=lf
 # Preserve captured evidence verbatim, including intentional conflict markers.
 outputs/evidence/*.txt -diff
