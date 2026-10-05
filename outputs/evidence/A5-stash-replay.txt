@@ -1,0 +1,54 @@
+Reconstructed preprocessing stash demonstration in isolated clone
+Working directory: C:\Work\uni\MLOPS\work\evidence-replay
+
+$ git stash push -m "Pause preprocessing edit for evidence replay"
+warning: in the working copy of 'assignment_3/src/preprocess.py', LF will be replaced by CRLF the next time Git touches it
+Saved working directory and index state On dev: Pause preprocessing edit for evidence replay
+
+Exit code: 0
+
+$ git stash list
+stash@{0}: On dev: Pause preprocessing edit for evidence replay
+
+Exit code: 0
+
+$ git switch main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 2 and 4 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+Exit code: 0
+
+$ git switch dev
+Switched to branch 'dev'
+
+Exit code: 0
+
+$ git stash pop
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   assignment_3/src/preprocess.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (6bd502988b3a26df9fb45a545445b3ef556d001d)
+
+Exit code: 0
+
+$ git diff
+diff --git a/assignment_3/src/preprocess.py b/assignment_3/src/preprocess.py
+index 709719d..4b02124 100644
+--- a/assignment_3/src/preprocess.py
++++ b/assignment_3/src/preprocess.py
+@@ -53,4 +53,5 @@ if __name__ == "__main__":
+     main()
+ 
+ 
+-# Temporary note: validation is split from the training data.
+\ No newline at end of file
++# Temporary note: validation is split from the training data.
++# Evidence replay: preprocessing edit paused for a branch switch.
+
+Exit code: 0

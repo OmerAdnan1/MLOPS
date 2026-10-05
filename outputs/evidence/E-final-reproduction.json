@@ -1,0 +1,23 @@
+{
+  "label": "E-final-reproduction",
+  "provenance": "Current project output",
+  "captured_utc": "2026-10-05T06:20:30.481269+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS\\assignment_3",
+  "commands": [
+    {
+      "command": "uv run dvc repro",
+      "exit_code": 0,
+      "output": "Stage 'prepare' didn't change, skipping\r\nRunning stage 'preprocess':\r\n> uv run python src/preprocess.py\r\nTraining images: (48000, 28, 28)\r\nValidation images: (12000, 28, 28)\r\nTest images: (10000, 28, 28)\r\nProcessed image range: 0.0 to 1.0\r\nUpdating lock file 'dvc.lock'\r\n\r\nStage 'train' didn't change, skipping\r\nStage 'evaluate' didn't change, skipping\r\n\r\nTo track the changes with git, run:\r\n\r\n\tgit add 'data\\.gitignore' dvc.lock\r\n\r\nTo enable auto staging, run:\r\n\r\n\tdvc config core.autostage true\r\nUse `dvc push` to send your updates to remote storage.\r\n"
+    },
+    {
+      "command": "uv run dvc status",
+      "exit_code": 0,
+      "output": "Data and pipelines are up to date.\r\n"
+    },
+    {
+      "command": "uv run dvc dag",
+      "exit_code": 0,
+      "output": "         +---------+      \r\n         | prepare |      \r\n         +---------+      \r\n              *           \r\n              *           \r\n              *           \r\n       +------------+     \r\n       | preprocess |     \r\n       +------------+     \r\n         **        **     \r\n       **            *    \r\n      *               **  \r\n+-------+               * \r\n| train |             **  \r\n+-------+            *    \r\n         **        **     \r\n           **    **       \r\n             *  *         \r\n        +----------+      \r\n        | evaluate |      \r\n        +----------+      \r\n"
+    }
+  ]
+}

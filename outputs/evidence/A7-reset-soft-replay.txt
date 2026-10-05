@@ -1,0 +1,21 @@
+Reconstructed soft reset in isolated clone
+Working directory: C:\Work\uni\MLOPS\work\evidence-replay
+
+$ git tag replay-reset-start
+
+Exit code: 0
+
+$ git reset --soft HEAD~1
+
+Exit code: 0
+
+$ git status --short
+M  assignment_3/src/prepare.py
+
+Exit code: 0
+
+$ git diff --staged --stat
+ assignment_3/src/prepare.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Exit code: 0

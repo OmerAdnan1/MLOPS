@@ -1,0 +1,28 @@
+{
+  "label": "E-merge-conflicts",
+  "provenance": "Current project output",
+  "captured_utc": "2026-10-05T06:16:55.344896+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS",
+  "commands": [
+    {
+      "command": "git merge teammate-sim",
+      "exit_code": 1,
+      "output": "warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it\nAuto-merging assignment_3/data/processed.dvc\nCONFLICT (content): Merge conflict in assignment_3/data/processed.dvc\nAuto-merging assignment_3/src/preprocess.py\nCONFLICT (content): Merge conflict in assignment_3/src/preprocess.py\nAutomatic merge failed; fix conflicts and then commit the result.\n"
+    },
+    {
+      "command": "git status --short",
+      "exit_code": 0,
+      "output": " M .gitignore\nUU assignment_3/data/processed.dvc\nUU assignment_3/src/preprocess.py\n?? assignment_3/.evidence/\n?? outputs/\n"
+    },
+    {
+      "command": "git diff --name-only --diff-filter=U",
+      "exit_code": 0,
+      "output": "warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it\nassignment_3/data/processed.dvc\nassignment_3/src/preprocess.py\n"
+    },
+    {
+      "command": "git diff -- assignment_3/src/preprocess.py assignment_3/data/processed.dvc",
+      "exit_code": 0,
+      "output": "diff --cc assignment_3/data/processed.dvc\nindex c58f34b,0ce3a2f..0000000\n--- a/assignment_3/data/processed.dvc\n+++ b/assignment_3/data/processed.dvc\n@@@ -1,5 -1,5 +1,9 @@@\n  outs:\n++<<<<<<< HEAD\n +- md5: 80e622291076427c5ecdc0d5b84afdee.dir\n++=======\n+ - md5: 969320c4e29eb97046a9f51690979d58.dir\n++>>>>>>> teammate-sim\n    size: 219590768\n    nfiles: 6\n    hash: md5\ndiff --cc assignment_3/src/preprocess.py\nindex 5a71617,6a711e6..0000000\n--- a/assignment_3/src/preprocess.py\n+++ b/assignment_3/src/preprocess.py\n@@@ -17,8 -17,8 +17,13 @@@ def main()\n      x_test = np.load(RAW_DIR / \"x_test.npy\")\n      y_test = np.load(RAW_DIR / \"y_test.npy\")\n  \n++<<<<<<< HEAD\n +    x_train = np.clip(x_train.astype(\"float32\") / 254.0, 0.0, 1.0)\n +    x_test = np.clip(x_test.astype(\"float32\") / 254.0, 0.0, 1.0)\n++=======\n+     x_train = x_train.astype(\"float32\") / 256.0\n+     x_test = x_test.astype(\"float32\") / 256.0\n++>>>>>>> teammate-sim\n  \n      x_train, x_val, y_train, y_val = train_test_split(\n          x_train,\n"
+    }
+  ]
+}

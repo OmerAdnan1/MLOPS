@@ -1,0 +1,64 @@
+Current project output
+Working directory: C:\Work\uni\MLOPS
+
+$ git merge teammate-sim
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+Auto-merging assignment_3/data/processed.dvc
+CONFLICT (content): Merge conflict in assignment_3/data/processed.dvc
+Auto-merging assignment_3/src/preprocess.py
+CONFLICT (content): Merge conflict in assignment_3/src/preprocess.py
+Automatic merge failed; fix conflicts and then commit the result.
+
+Exit code: 1
+
+$ git status --short
+ M .gitignore
+UU assignment_3/data/processed.dvc
+UU assignment_3/src/preprocess.py
+?? assignment_3/.evidence/
+?? outputs/
+
+Exit code: 0
+
+$ git diff --name-only --diff-filter=U
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+assignment_3/data/processed.dvc
+assignment_3/src/preprocess.py
+
+Exit code: 0
+
+$ git diff -- assignment_3/src/preprocess.py assignment_3/data/processed.dvc
+diff --cc assignment_3/data/processed.dvc
+index c58f34b,0ce3a2f..0000000
+--- a/assignment_3/data/processed.dvc
++++ b/assignment_3/data/processed.dvc
+@@@ -1,5 -1,5 +1,9 @@@
+  outs:
+++<<<<<<< HEAD
+ +- md5: 80e622291076427c5ecdc0d5b84afdee.dir
+++=======
++ - md5: 969320c4e29eb97046a9f51690979d58.dir
+++>>>>>>> teammate-sim
+    size: 219590768
+    nfiles: 6
+    hash: md5
+diff --cc assignment_3/src/preprocess.py
+index 5a71617,6a711e6..0000000
+--- a/assignment_3/src/preprocess.py
++++ b/assignment_3/src/preprocess.py
+@@@ -17,8 -17,8 +17,13 @@@ def main()
+      x_test = np.load(RAW_DIR / "x_test.npy")
+      y_test = np.load(RAW_DIR / "y_test.npy")
+  
+++<<<<<<< HEAD
+ +    x_train = np.clip(x_train.astype("float32") / 254.0, 0.0, 1.0)
+ +    x_test = np.clip(x_test.astype("float32") / 254.0, 0.0, 1.0)
+++=======
++     x_train = x_train.astype("float32") / 256.0
++     x_test = x_test.astype("float32") / 256.0
+++>>>>>>> teammate-sim
+  
+      x_train, x_val, y_train, y_val = train_test_split(
+          x_train,
+
+Exit code: 0

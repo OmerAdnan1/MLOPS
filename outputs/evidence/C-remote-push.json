@@ -1,0 +1,18 @@
+{
+  "label": "C-remote-push",
+  "provenance": "Current project output",
+  "captured_utc": "2026-10-05T06:16:55.037330+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS\\assignment_3",
+  "commands": [
+    {
+      "command": "uv run dvc remote list",
+      "exit_code": 0,
+      "output": "gdrive_storage  gdrive://1cWQ1aXsd-Ov_v3R9FreQfBMd-2wlOD0W      (default)\r\ngdriveremote    gdrive://1cWQ1aXsd-Ov_v3R9FreQfBMd-2wlOD0W\r\n"
+    },
+    {
+      "command": "uv run dvc push -r gdrive_storage",
+      "exit_code": 0,
+      "output": "Everything is up to date.\r\n"
+    }
+  ]
+}

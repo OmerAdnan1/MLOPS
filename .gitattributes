@@ -1,0 +1,4 @@
+*.pdf binary
+*.png binary
+# Preserve captured evidence verbatim, including intentional conflict markers.
+outputs/evidence/*.txt -diff

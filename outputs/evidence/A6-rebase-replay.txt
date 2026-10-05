@@ -1,0 +1,70 @@
+Reconstructed rebase demonstration in isolated clone
+Working directory: C:\Work\uni\MLOPS\work\evidence-replay
+
+$ git log --oneline --graph --all -15
+*   08cb266 Evidence replay: merge hotfix
+|\  
+| * 4b73c97 Evidence replay: documentation hotfix
+|/  
+| * c9611f3 Evidence replay: temporary preparation comment
+| | * dd9f21a Teammate simulation: normalize using divisor 256
+| | * dc670be Temporarily use processed-data pointer for conflict exercise
+| | *   3365700 Merge v2 ANN improvements
+| | |\  
+| | |/  
+| |/|   
+| * | 1fe74d3 Increase dense units and reproduce v2 model
+|/ /  
+| *   64be958 Merge v1 reproducible ANN pipeline
+| |\  
+| |/  
+|/|   
+* | 6c475e9 Define and reproduce four-stage DVC pipeline
+* | 83b4064 Track initial data models and reports with DVC
+* | 48f54ee Initialize assignment DVC subproject
+| | * bc33170 Scratch: second throwaway commit
+| | * fe49065 Scratch: restore first throwaway commit
+| |/  
+|/|   
+| | * 1510c6a Scratch: first throwaway commit
+| |/  
+|/|   
+* | 74fcdfb Remove obsolete scratch file using git rm
+
+Exit code: 0
+
+$ git rebase main
+Rebasing (1/2)Rebasing (2/2)Successfully rebased and updated refs/heads/dev.
+
+Exit code: 0
+
+$ git log --oneline --graph --all -15
+* d5103f4 Evidence replay: temporary preparation comment
+* f83be74 Increase dense units and reproduce v2 model
+*   08cb266 Evidence replay: merge hotfix
+|\  
+| * 4b73c97 Evidence replay: documentation hotfix
+|/  
+| * dd9f21a Teammate simulation: normalize using divisor 256
+| * dc670be Temporarily use processed-data pointer for conflict exercise
+| *   3365700 Merge v2 ANN improvements
+| |\  
+| | * 1fe74d3 Increase dense units and reproduce v2 model
+| |/  
+|/|   
+| *   64be958 Merge v1 reproducible ANN pipeline
+| |\  
+| |/  
+|/|   
+* | 6c475e9 Define and reproduce four-stage DVC pipeline
+* | 83b4064 Track initial data models and reports with DVC
+* | 48f54ee Initialize assignment DVC subproject
+| | * bc33170 Scratch: second throwaway commit
+| | * fe49065 Scratch: restore first throwaway commit
+| |/  
+|/|   
+| | * 1510c6a Scratch: first throwaway commit
+| |/  
+|/|   
+
+Exit code: 0

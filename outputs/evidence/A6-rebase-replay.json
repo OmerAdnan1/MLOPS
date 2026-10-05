@@ -1,0 +1,23 @@
+{
+  "label": "A6-rebase-replay",
+  "provenance": "Reconstructed rebase demonstration in isolated clone",
+  "captured_utc": "2026-10-05T06:15:26.622465+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS\\work\\evidence-replay",
+  "commands": [
+    {
+      "command": "git log --oneline --graph --all -15",
+      "exit_code": 0,
+      "output": "*   08cb266 Evidence replay: merge hotfix\n|\\  \n| * 4b73c97 Evidence replay: documentation hotfix\n|/  \n| * c9611f3 Evidence replay: temporary preparation comment\n| | * dd9f21a Teammate simulation: normalize using divisor 256\n| | * dc670be Temporarily use processed-data pointer for conflict exercise\n| | *   3365700 Merge v2 ANN improvements\n| | |\\  \n| | |/  \n| |/|   \n| * | 1fe74d3 Increase dense units and reproduce v2 model\n|/ /  \n| *   64be958 Merge v1 reproducible ANN pipeline\n| |\\  \n| |/  \n|/|   \n* | 6c475e9 Define and reproduce four-stage DVC pipeline\n* | 83b4064 Track initial data models and reports with DVC\n* | 48f54ee Initialize assignment DVC subproject\n| | * bc33170 Scratch: second throwaway commit\n| | * fe49065 Scratch: restore first throwaway commit\n| |/  \n|/|   \n| | * 1510c6a Scratch: first throwaway commit\n| |/  \n|/|   \n* | 74fcdfb Remove obsolete scratch file using git rm\n"
+    },
+    {
+      "command": "git rebase main",
+      "exit_code": 0,
+      "output": "Rebasing (1/2)\rRebasing (2/2)\rSuccessfully rebased and updated refs/heads/dev.\n"
+    },
+    {
+      "command": "git log --oneline --graph --all -15",
+      "exit_code": 0,
+      "output": "* d5103f4 Evidence replay: temporary preparation comment\n* f83be74 Increase dense units and reproduce v2 model\n*   08cb266 Evidence replay: merge hotfix\n|\\  \n| * 4b73c97 Evidence replay: documentation hotfix\n|/  \n| * dd9f21a Teammate simulation: normalize using divisor 256\n| * dc670be Temporarily use processed-data pointer for conflict exercise\n| *   3365700 Merge v2 ANN improvements\n| |\\  \n| | * 1fe74d3 Increase dense units and reproduce v2 model\n| |/  \n|/|   \n| *   64be958 Merge v1 reproducible ANN pipeline\n| |\\  \n| |/  \n|/|   \n* | 6c475e9 Define and reproduce four-stage DVC pipeline\n* | 83b4064 Track initial data models and reports with DVC\n* | 48f54ee Initialize assignment DVC subproject\n| | * bc33170 Scratch: second throwaway commit\n| | * fe49065 Scratch: restore first throwaway commit\n| |/  \n|/|   \n| | * 1510c6a Scratch: first throwaway commit\n| |/  \n|/|   \n"
+    }
+  ]
+}

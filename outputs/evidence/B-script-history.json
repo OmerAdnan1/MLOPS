@@ -1,0 +1,13 @@
+{
+  "label": "B-script-history",
+  "provenance": "Current project output",
+  "captured_utc": "2026-10-05T06:14:22.018720+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS",
+  "commands": [
+    {
+      "command": "git log --oneline -- assignment_3/src assignment_3/params.yaml assignment_3/dvc.yaml",
+      "exit_code": 0,
+      "output": "dc670be Temporarily use processed-data pointer for conflict exercise\n1fe74d3 Increase dense units and reproduce v2 model\n6c475e9 Define and reproduce four-stage DVC pipeline\nea07b7f Document preservation of raw dataset values\nbad2604 Implement test evaluation and confusion matrix generation\n3ade3fa Trained a ANN\n7a258f0 Document validation split after resuming stashed work\nc28f87d Implement normalized stratified train-validation preprocessing\na9f715c Implement Fashion-MNIST raw data preparation\n8c3c43a Define preprocessing and ANN training parameters\n6f50944 Project Scaffold\n"
+    }
+  ]
+}

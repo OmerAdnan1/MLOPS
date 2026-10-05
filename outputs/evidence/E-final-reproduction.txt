@@ -1,0 +1,56 @@
+Current project output
+Working directory: C:\Work\uni\MLOPS\assignment_3
+
+$ uv run dvc repro
+Stage 'prepare' didn't change, skipping
+Running stage 'preprocess':
+> uv run python src/preprocess.py
+Training images: (48000, 28, 28)
+Validation images: (12000, 28, 28)
+Test images: (10000, 28, 28)
+Processed image range: 0.0 to 1.0
+Updating lock file 'dvc.lock'
+
+Stage 'train' didn't change, skipping
+Stage 'evaluate' didn't change, skipping
+
+To track the changes with git, run:
+
+	git add 'data\.gitignore' dvc.lock
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Use `dvc push` to send your updates to remote storage.
+
+Exit code: 0
+
+$ uv run dvc status
+Data and pipelines are up to date.
+
+Exit code: 0
+
+$ uv run dvc dag
+         +---------+      
+         | prepare |      
+         +---------+      
+              *           
+              *           
+              *           
+       +------------+     
+       | preprocess |     
+       +------------+     
+         **        **     
+       **            *    
+      *               **  
++-------+               * 
+| train |             **  
++-------+            *    
+         **        **     
+           **    **       
+             *  *         
+        +----------+      
+        | evaluate |      
+        +----------+      
+
+Exit code: 0

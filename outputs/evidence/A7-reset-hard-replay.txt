@@ -1,0 +1,16 @@
+Reconstructed hard reset in isolated clone, disposable demo commit only
+Working directory: C:\Work\uni\MLOPS\work\evidence-replay
+
+$ git reset --hard replay-reset-start
+HEAD is now at d5103f4 Evidence replay: temporary preparation comment
+
+Exit code: 0
+
+$ git reset --hard HEAD~1
+HEAD is now at f83be74 Increase dense units and reproduce v2 model
+
+Exit code: 0
+
+$ git status --short
+
+Exit code: 0

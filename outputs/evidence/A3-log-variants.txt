@@ -1,0 +1,226 @@
+Current project output
+Working directory: C:\Work\uni\MLOPS
+
+$ git log --oneline --graph --all
+* dd9f21a Teammate simulation: normalize using divisor 256
+* dc670be Temporarily use processed-data pointer for conflict exercise
+*   3365700 Merge v2 ANN improvements
+|\  
+| * 1fe74d3 Increase dense units and reproduce v2 model
+* | 64be958 Merge v1 reproducible ANN pipeline
+|\| 
+| * 6c475e9 Define and reproduce four-stage DVC pipeline
+| * 83b4064 Track initial data models and reports with DVC
+| * 48f54ee Initialize assignment DVC subproject
+| | * bc33170 Scratch: second throwaway commit
+| | * fe49065 Scratch: restore first throwaway commit
+| |/  
+| | * 1510c6a Scratch: first throwaway commit
+| |/  
+| * 74fcdfb Remove obsolete scratch file using git rm
+| * 7e814c0 Move project notes into docs using git mv
+| * bd68b9e Add project notes and temporary scratch file
+| * ea07b7f Document preservation of raw dataset values
+| * bad2604 Implement test evaluation and confusion matrix generation
+| * 3ade3fa Trained a ANN
+| * 7a258f0 Document validation split after resuming stashed work
+| * c28f87d Implement normalized stratified train-validation preprocessing
+| * a9f715c Implement Fashion-MNIST raw data preparation
+| * 8c3c43a Define preprocessing and ANN training parameters
+| * 4cc09e8 Add assignment-specific ignore rules
+|/  
+*   7553a8c Merge README hotfix
+|\  
+| * 8548d3e Correct README heading capitalization
+|/  
+* e26a18d Initializing
+* 6f50944 Project Scaffold
+*   2b737b9 Merge branch 'main' of https://github.com/OmerAdnan1/MLOPS
+|\  
+| * 40ffc59 Initial commit
+* 11130f5 Initialize Fashion-MNIST ANN project
+* a6d90a6 Agent host session d90627c1-772a-465f-85bf-07ca9bf70462 - turn 2
+* f74928e Agent host session d90627c1-772a-465f-85bf-07ca9bf70462 - turn 2 start
+* f1d18f9 Agent host session d90627c1-772a-465f-85bf-07ca9bf70462 - turn 1
+* 539887e Agent host session d90627c1-772a-465f-85bf-07ca9bf70462 - turn 1 start
+* eed43df Agent host session d90627c1-772a-465f-85bf-07ca9bf70462 - baseline checkpoint
+
+Exit code: 0
+
+$ git log --stat -3
+commit dc670be3b2e0fad51d8c3bbdf8e864d094d00fa1
+Author: Omer Adnan <omeradnan.yaqoob@gmail.com>
+Date:   Mon Oct 5 02:40:06 2026 +0500
+
+    Temporarily use processed-data pointer for conflict exercise
+
+ assignment_3/data/processed.dvc |  6 ++++
+ assignment_3/dvc.lock           | 30 --------------------
+ assignment_3/dvc.yaml           | 61 ++++++++++++++++-------------------------
+ 3 files changed, 30 insertions(+), 67 deletions(-)
+
+commit 3365700c59264de608d3efe7fd3b9c8a37450a02
+Merge: 64be958 1fe74d3
+Author: Omer Adnan <omeradnan.yaqoob@gmail.com>
+Date:   Mon Oct 5 02:36:21 2026 +0500
+
+    Merge v2 ANN improvements
+
+commit 1fe74d372e71ec1119644aae44c80b54a15c0069
+Author: Omer Adnan <omeradnan.yaqoob@gmail.com>
+Date:   Mon Oct 5 02:34:26 2026 +0500
+
+    Increase dense units and reproduce v2 model
+
+ assignment_3/dvc.lock     | 18 +++++++++---------
+ assignment_3/metrics.json |  4 ++--
+ assignment_3/params.yaml  |  2 +-
+ 3 files changed, 12 insertions(+), 12 deletions(-)
+
+Exit code: 0
+
+$ git log -p -1
+commit dc670be3b2e0fad51d8c3bbdf8e864d094d00fa1
+Author: Omer Adnan <omeradnan.yaqoob@gmail.com>
+Date:   Mon Oct 5 02:40:06 2026 +0500
+
+    Temporarily use processed-data pointer for conflict exercise
+
+diff --git a/assignment_3/data/processed.dvc b/assignment_3/data/processed.dvc
+new file mode 100644
+index 0000000..ba2e19f
+--- /dev/null
++++ b/assignment_3/data/processed.dvc
+@@ -0,0 +1,6 @@
++outs:
++- md5: eeb8cf242a713e05d8e689a1ad558025.dir
++  size: 219590768
++  nfiles: 6
++  hash: md5
++  path: processed
+diff --git a/assignment_3/dvc.lock b/assignment_3/dvc.lock
+index ea9cdc7..fe67f00 100644
+--- a/assignment_3/dvc.lock
++++ b/assignment_3/dvc.lock
+@@ -21,36 +21,6 @@ stages:
+       md5: 23b0000338669d2c61217dbd94633aa0.dir
+       size: 54950512
+       nfiles: 4
+-  preprocess:
+-    cmd: uv run python src/preprocess.py
+-    deps:
+-    - path: data/raw
+-      hash: md5
+-      md5: 23b0000338669d2c61217dbd94633aa0.dir
+-      size: 54950512
+-      nfiles: 4
+-    - path: pyproject.toml
+-      hash: md5
+-      md5: 482ba0d34f7a646c4cc8f697d427462c
+-      size: 346
+-    - path: src/preprocess.py
+-      hash: md5
+-      md5: dc9430bb4052564e6e7502bac9221af5
+-      size: 1592
+-    - path: uv.lock
+-      hash: md5
+-      md5: f97eb41c8c0a0b476c7942be12df1928
+-      size: 570101
+-    params:
+-      params.yaml:
+-        preprocess.seed: 42
+-        preprocess.test_size: 0.2
+-    outs:
+-    - path: data/processed
+-      hash: md5
+-      md5: eeb8cf242a713e05d8e689a1ad558025.dir
+-      size: 219590768
+-      nfiles: 6
+   train:
+     cmd: uv run python src/train.py
+     deps:
+diff --git a/assignment_3/dvc.yaml b/assignment_3/dvc.yaml
+index 892018f..e0a7f54 100644
+--- a/assignment_3/dvc.yaml
++++ b/assignment_3/dvc.yaml
+@@ -2,53 +2,40 @@ stages:
+   prepare:
+     cmd: uv run python src/prepare.py
+     deps:
+-      - src/prepare.py
+-      - pyproject.toml
+-      - uv.lock
++    - src/prepare.py
++    - pyproject.toml
++    - uv.lock
+     outs:
+-      - data/raw
+-
+-  preprocess:
+-    cmd: uv run python src/preprocess.py
+-    deps:
+-      - src/preprocess.py
+-      - data/raw
+-      - pyproject.toml
+-      - uv.lock
+-    params:
+-      - preprocess.test_size
+-      - preprocess.seed
+-    outs:
+-      - data/processed
++    - data/raw
+ 
+   train:
+     cmd: uv run python src/train.py
+     deps:
+-      - src/train.py
+-      - data/processed
+-      - pyproject.toml
+-      - uv.lock
++    - src/train.py
++    - data/processed
++    - pyproject.toml
++    - uv.lock
+     params:
+-      - train.dense_units
+-      - train.dropout_rate
+-      - train.learning_rate
+-      - train.epochs
+-      - train.batch_size
+-      - train.seed
++    - train.dense_units
++    - train.dropout_rate
++    - train.learning_rate
++    - train.epochs
++    - train.batch_size
++    - train.seed
+     outs:
+-      - models
++    - models
+ 
+   evaluate:
+     cmd: uv run python src/evaluate.py
+     deps:
+-      - src/evaluate.py
+-      - models/model.h5
+-      - data/processed/x_test.npy
+-      - data/processed/y_test.npy
+-      - pyproject.toml
+-      - uv.lock
++    - src/evaluate.py
++    - models/model.h5
++    - data/processed/x_test.npy
++    - data/processed/y_test.npy
++    - pyproject.toml
++    - uv.lock
+     outs:
+-      - reports
++    - reports
+     metrics:
+-      - metrics.json:
+-          cache: false
+\ No newline at end of file
++    - metrics.json:
++        cache: false
+
+Exit code: 0

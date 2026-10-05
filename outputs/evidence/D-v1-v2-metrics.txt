@@ -1,0 +1,37 @@
+Current project output
+Working directory: C:\Work\uni\MLOPS
+
+$ git show v1:assignment_3/metrics.json
+{
+  "test_loss": 0.3385728895664215,
+  "test_accuracy": 0.8837000131607056,
+  "test_samples": 10000
+}
+
+Exit code: 0
+
+$ git show v2:assignment_3/metrics.json
+{
+  "test_loss": 0.34088870882987976,
+  "test_accuracy": 0.8842999935150146,
+  "test_samples": 10000
+}
+
+Exit code: 0
+
+$ git diff v1 v2 -- assignment_3/params.yaml
+diff --git a/assignment_3/params.yaml b/assignment_3/params.yaml
+index c6a1486..56cc89b 100644
+--- a/assignment_3/params.yaml
++++ b/assignment_3/params.yaml
+@@ -3,7 +3,7 @@ preprocess:
+   seed: 42
+ 
+ train:
+-  dense_units: 128
++  dense_units: 256
+   dropout_rate: 0.2
+   learning_rate: 0.001
+   epochs: 20
+
+Exit code: 0

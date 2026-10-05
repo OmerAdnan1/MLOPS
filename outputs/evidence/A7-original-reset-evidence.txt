@@ -1,0 +1,150 @@
+Original tags and local reflog: actual earlier reset events
+Working directory: C:\Work\uni\MLOPS
+
+$ git show --stat reset-soft-demo
+commit 1510c6ab739ea28bd6a0b6edfb030015e812937a
+Author: Omer Adnan <omeradnan.yaqoob@gmail.com>
+Date:   Mon Oct 5 00:59:34 2026 +0500
+
+    Scratch: first throwaway commit
+
+ assignment_3/reset-demo.txt | Bin 0 -> 52 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+Exit code: 0
+
+$ git show --stat reset-hard-demo
+commit bc331707f2499591c842e4ea5f571c12e8b9855c
+Author: Omer Adnan <omeradnan.yaqoob@gmail.com>
+Date:   Mon Oct 5 01:03:40 2026 +0500
+
+    Scratch: second throwaway commit
+
+ assignment_3/reset-demo.txt | Bin 52 -> 54 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+Exit code: 0
+
+$ git reflog --all --date=iso
+dc670be HEAD@{2026-10-05 11:09:44 +0500}: checkout: moving from teammate-sim to main
+dd9f21a refs/remotes/origin/teammate-sim@{2026-10-05 02:46:08 +0500}: update by push
+dd9f21a refs/heads/teammate-sim@{2026-10-05 02:46:04 +0500}: commit: Teammate simulation: normalize using divisor 256
+dd9f21a HEAD@{2026-10-05 02:46:04 +0500}: commit: Teammate simulation: normalize using divisor 256
+dc670be refs/heads/teammate-sim@{2026-10-05 02:40:20 +0500}: branch: Created from HEAD
+dc670be HEAD@{2026-10-05 02:40:20 +0500}: checkout: moving from main to teammate-sim
+dc670be refs/heads/main@{2026-10-05 02:40:06 +0500}: commit: Temporarily use processed-data pointer for conflict exercise
+dc670be HEAD@{2026-10-05 02:40:06 +0500}: commit: Temporarily use processed-data pointer for conflict exercise
+3365700 refs/remotes/origin/main@{2026-10-05 02:36:24 +0500}: update by push
+3365700 refs/heads/main@{2026-10-05 02:36:21 +0500}: merge dev: Merge made by the 'ort' strategy.
+3365700 HEAD@{2026-10-05 02:36:21 +0500}: merge dev: Merge made by the 'ort' strategy.
+64be958 HEAD@{2026-10-05 02:36:21 +0500}: checkout: moving from dev to main
+1fe74d3 refs/remotes/origin/dev@{2026-10-05 02:35:10 +0500}: update by push
+1fe74d3 refs/heads/dev@{2026-10-05 02:34:26 +0500}: commit: Increase dense units and reproduce v2 model
+1fe74d3 HEAD@{2026-10-05 02:34:26 +0500}: commit: Increase dense units and reproduce v2 model
+6c475e9 HEAD@{2026-10-05 02:32:40 +0500}: checkout: moving from main to dev
+6c475e9 refs/remotes/origin/dev@{2026-10-05 02:32:37 +0500}: update by push
+64be958 refs/remotes/origin/main@{2026-10-05 02:32:33 +0500}: update by push
+64be958 refs/heads/main@{2026-10-05 02:32:14 +0500}: merge dev: Merge made by the 'ort' strategy.
+64be958 HEAD@{2026-10-05 02:32:14 +0500}: merge dev: Merge made by the 'ort' strategy.
+7553a8c HEAD@{2026-10-05 02:32:14 +0500}: checkout: moving from dev to main
+6c475e9 refs/heads/dev@{2026-10-05 02:31:15 +0500}: commit: Define and reproduce four-stage DVC pipeline
+6c475e9 HEAD@{2026-10-05 02:31:15 +0500}: commit: Define and reproduce four-stage DVC pipeline
+83b4064 refs/heads/dev@{2026-10-05 01:24:37 +0500}: commit: Track initial data models and reports with DVC
+83b4064 HEAD@{2026-10-05 01:24:37 +0500}: commit: Track initial data models and reports with DVC
+48f54ee refs/heads/dev@{2026-10-05 01:14:08 +0500}: commit: Initialize assignment DVC subproject
+48f54ee HEAD@{2026-10-05 01:14:08 +0500}: commit: Initialize assignment DVC subproject
+74fcdfb HEAD@{2026-10-05 01:12:06 +0500}: checkout: moving from scratch to dev
+fe49065 refs/heads/scratch@{2026-10-05 01:05:34 +0500}: reset: moving to HEAD~1
+fe49065 HEAD@{2026-10-05 01:05:34 +0500}: reset: moving to HEAD~1
+bc33170 refs/heads/scratch@{2026-10-05 01:03:40 +0500}: commit: Scratch: second throwaway commit
+bc33170 HEAD@{2026-10-05 01:03:40 +0500}: commit: Scratch: second throwaway commit
+fe49065 refs/heads/scratch@{2026-10-05 01:02:36 +0500}: commit: Scratch: restore first throwaway commit
+fe49065 HEAD@{2026-10-05 01:02:36 +0500}: commit: Scratch: restore first throwaway commit
+74fcdfb refs/heads/scratch@{2026-10-05 01:00:31 +0500}: reset: moving to HEAD~1
+74fcdfb HEAD@{2026-10-05 01:00:31 +0500}: reset: moving to HEAD~1
+1510c6a refs/heads/scratch@{2026-10-05 00:59:34 +0500}: commit: Scratch: first throwaway commit
+1510c6a HEAD@{2026-10-05 00:59:34 +0500}: commit: Scratch: first throwaway commit
+74fcdfb refs/heads/scratch@{2026-10-05 00:58:28 +0500}: branch: Created from HEAD
+74fcdfb HEAD@{2026-10-05 00:58:28 +0500}: checkout: moving from dev to scratch
+74fcdfb HEAD@{2026-10-05 00:58:20 +0500}: checkout: moving from dev to dev
+74fcdfb refs/remotes/origin/dev@{2026-10-05 00:51:46 +0500}: update by push
+7553a8c refs/remotes/origin/main@{2026-10-05 00:49:31 +0500}: update by push
+74fcdfb HEAD@{2026-10-05 00:48:51 +0500}: checkout: moving from main to dev
+7553a8c HEAD@{2026-10-05 00:47:58 +0500}: checkout: moving from dev to main
+74fcdfb refs/heads/dev@{2026-10-05 00:39:35 +0500}: rebase (finish): refs/heads/dev onto 7553a8c37a8d7da4188a0e9742e7de41452265a7
+74fcdfb HEAD@{2026-10-05 00:39:35 +0500}: rebase (finish): returning to refs/heads/dev
+74fcdfb HEAD@{2026-10-05 00:39:35 +0500}: rebase (pick): Remove obsolete scratch file using git rm
+7e814c0 HEAD@{2026-10-05 00:39:35 +0500}: rebase (pick): Move project notes into docs using git mv
+bd68b9e HEAD@{2026-10-05 00:39:35 +0500}: rebase (pick): Add project notes and temporary scratch file
+ea07b7f HEAD@{2026-10-05 00:39:35 +0500}: rebase (pick): Document preservation of raw dataset values
+bad2604 HEAD@{2026-10-05 00:39:35 +0500}: rebase (pick): Implement test evaluation and confusion matrix generation
+3ade3fa HEAD@{2026-10-05 00:39:35 +0500}: rebase (pick): Trained a ANN
+7a258f0 HEAD@{2026-10-05 00:39:35 +0500}: rebase (pick): Document validation split after resuming stashed work
+c28f87d HEAD@{2026-10-05 00:39:35 +0500}: rebase (pick): Implement normalized stratified train-validation preprocessing
+a9f715c HEAD@{2026-10-05 00:39:34 +0500}: rebase (pick): Implement Fashion-MNIST raw data preparation
+8c3c43a HEAD@{2026-10-05 00:39:34 +0500}: rebase (pick): Define preprocessing and ANN training parameters
+4cc09e8 HEAD@{2026-10-05 00:39:34 +0500}: rebase (pick): Add assignment-specific ignore rules
+7553a8c HEAD@{2026-10-05 00:39:34 +0500}: rebase (start): checkout main
+914cf04 HEAD@{2026-10-05 00:39:26 +0500}: checkout: moving from main to dev
+7553a8c refs/heads/main@{2026-10-05 00:38:53 +0500}: merge hotfix: Merge made by the 'ort' strategy.
+7553a8c HEAD@{2026-10-05 00:38:53 +0500}: merge hotfix: Merge made by the 'ort' strategy.
+e26a18d HEAD@{2026-10-05 00:37:18 +0500}: checkout: moving from hotfix to main
+8548d3e refs/heads/hotfix@{2026-10-05 00:37:11 +0500}: commit: Correct README heading capitalization
+8548d3e HEAD@{2026-10-05 00:37:11 +0500}: commit: Correct README heading capitalization
+e26a18d refs/heads/hotfix@{2026-10-05 00:10:47 +0500}: branch: Created from HEAD
+e26a18d HEAD@{2026-10-05 00:10:47 +0500}: checkout: moving from main to hotfix
+e26a18d HEAD@{2026-10-05 00:10:35 +0500}: checkout: moving from dev to main
+914cf04 refs/heads/dev@{2026-10-05 00:08:44 +0500}: commit: Remove obsolete scratch file using git rm
+914cf04 HEAD@{2026-10-05 00:08:44 +0500}: commit: Remove obsolete scratch file using git rm
+dfc932d refs/heads/dev@{2026-10-05 00:08:33 +0500}: commit: Move project notes into docs using git mv
+dfc932d HEAD@{2026-10-05 00:08:33 +0500}: commit: Move project notes into docs using git mv
+344200d refs/heads/dev@{2026-10-05 00:07:28 +0500}: commit: Add project notes and temporary scratch file
+344200d HEAD@{2026-10-05 00:07:28 +0500}: commit: Add project notes and temporary scratch file
+e37274c refs/heads/dev@{2026-10-04 23:46:02 +0500}: commit: Document preservation of raw dataset values
+e37274c HEAD@{2026-10-04 23:46:02 +0500}: commit: Document preservation of raw dataset values
+c231abd HEAD@{2026-10-04 23:44:43 +0500}: reset: moving to HEAD
+c231abd refs/heads/dev@{2026-10-04 23:43:41 +0500}: commit: Implement test evaluation and confusion matrix generation
+c231abd HEAD@{2026-10-04 23:43:41 +0500}: commit: Implement test evaluation and confusion matrix generation
+312b0d2 refs/heads/dev@{2026-10-04 23:40:05 +0500}: commit: Trained a ANN
+312b0d2 HEAD@{2026-10-04 23:40:05 +0500}: commit: Trained a ANN
+443c03e refs/heads/dev@{2026-10-04 23:11:50 +0500}: commit: Document validation split after resuming stashed work
+443c03e HEAD@{2026-10-04 23:11:50 +0500}: commit: Document validation split after resuming stashed work
+99170bc HEAD@{2026-10-04 23:09:59 +0500}: checkout: moving from main to dev
+e26a18d HEAD@{2026-10-04 23:07:25 +0500}: checkout: moving from dev to main
+99170bc HEAD@{2026-10-04 23:07:10 +0500}: reset: moving to HEAD
+99170bc refs/heads/dev@{2026-10-04 23:04:10 +0500}: commit: Implement normalized stratified train-validation preprocessing
+99170bc HEAD@{2026-10-04 23:04:10 +0500}: commit: Implement normalized stratified train-validation preprocessing
+9dc285a refs/heads/dev@{2026-10-04 23:03:29 +0500}: commit: Implement Fashion-MNIST raw data preparation
+9dc285a HEAD@{2026-10-04 23:03:29 +0500}: commit: Implement Fashion-MNIST raw data preparation
+b35d279 HEAD@{2026-10-04 22:59:31 +0500}: reset: moving to HEAD
+b35d279 refs/heads/dev@{2026-10-04 22:39:00 +0500}: commit: Define preprocessing and ANN training parameters
+b35d279 HEAD@{2026-10-04 22:39:00 +0500}: commit: Define preprocessing and ANN training parameters
+a23f325 refs/remotes/origin/dev@{2026-10-04 22:28:33 +0500}: update by push
+a23f325 refs/heads/dev@{2026-10-04 22:27:05 +0500}: commit: Add assignment-specific ignore rules
+a23f325 HEAD@{2026-10-04 22:27:05 +0500}: commit: Add assignment-specific ignore rules
+e26a18d HEAD@{2026-10-04 22:25:50 +0500}: checkout: moving from dev to dev
+e26a18d refs/heads/dev@{2026-10-04 21:00:37 +0500}: merge main: Fast-forward
+e26a18d HEAD@{2026-10-04 21:00:37 +0500}: merge main: Fast-forward
+6f50944 HEAD@{2026-10-04 20:58:14 +0500}: checkout: moving from main to dev
+e26a18d refs/remotes/origin/main@{2026-10-04 20:58:12 +0500}: update by push
+e26a18d refs/heads/main@{2026-10-04 20:58:02 +0500}: commit: Initializing
+e26a18d HEAD@{2026-10-04 20:58:02 +0500}: commit: Initializing
+6f50944 HEAD@{2026-10-04 20:47:50 +0500}: checkout: moving from dev to main
+6f50944 HEAD@{2026-10-04 20:47:43 +0500}: reset: moving to HEAD
+6f50944 refs/heads/dev@{2026-10-04 20:19:25 +0500}: branch: Created from HEAD
+6f50944 HEAD@{2026-10-04 20:19:25 +0500}: checkout: moving from main to dev
+6f50944 HEAD@{2026-10-04 20:18:49 +0500}: checkout: moving from de to main
+6f50944 HEAD@{2026-10-04 20:18:44 +0500}: checkout: moving from main to de
+6f50944 HEAD@{2026-10-04 20:18:27 +0500}: checkout: moving from de to main
+6f50944 HEAD@{2026-10-04 19:26:21 +0500}: checkout: moving from main to de
+6f50944 refs/remotes/origin/main@{2026-10-04 19:25:33 +0500}: update by push
+6f50944 refs/heads/main@{2026-10-04 19:25:18 +0500}: commit: Project Scaffold
+6f50944 HEAD@{2026-10-04 19:25:18 +0500}: commit: Project Scaffold
+2b737b9 refs/remotes/origin/main@{2026-10-04 15:43:17 +0500}: update by push
+2b737b9 refs/heads/main@{2026-10-04 15:41:49 +0500}: commit (merge): Merge branch 'main' of https://github.com/OmerAdnan1/MLOPS
+2b737b9 HEAD@{2026-10-04 15:41:49 +0500}: commit (merge): Merge branch 'main' of https://github.com/OmerAdnan1/MLOPS
+40ffc59 refs/remotes/origin/main@{2026-10-04 15:37:35 +0500}: pull origin main: storing head
+11130f5 refs/heads/main@{2026-10-04 15:35:24 +0500}: commit (initial): Initialize Fashion-MNIST ANN project
+11130f5 HEAD@{2026-10-04 15:35:24 +0500}: commit (initial): Initialize Fashion-MNIST ANN project
+
+Exit code: 0

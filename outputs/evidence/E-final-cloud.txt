@@ -1,0 +1,12 @@
+Current project output
+Working directory: C:\Work\uni\MLOPS\assignment_3
+
+$ uv run dvc push -r gdrive_storage
+Everything is up to date.
+
+Exit code: 0
+
+$ uv run dvc status -c -r gdrive_storage
+Cache and remote 'gdrive_storage' are in sync.
+
+Exit code: 0

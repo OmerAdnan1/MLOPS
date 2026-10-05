@@ -1,0 +1,18 @@
+{
+  "label": "A8-original-move-remove",
+  "provenance": "Original project commits: rename and deletion evidence",
+  "captured_utc": "2026-10-05T06:14:21.973145+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS",
+  "commands": [
+    {
+      "command": "git show --summary --stat 7e814c0",
+      "exit_code": 0,
+      "output": "commit 7e814c04738c791accd4f39ed897794a136056ce\nAuthor: Omer Adnan <omeradnan.yaqoob@gmail.com>\nDate:   Mon Oct 5 00:08:33 2026 +0500\n\n    Move project notes into docs using git mv\n\n assignment_3/{ => docs}/project-notes.txt | Bin\n 1 file changed, 0 insertions(+), 0 deletions(-)\n rename assignment_3/{ => docs}/project-notes.txt (100%)\n"
+    },
+    {
+      "command": "git show --summary --stat 74fcdfb",
+      "exit_code": 0,
+      "output": "commit 74fcdfb1369575bce0c05d0f88e8bb6ace30715f\nAuthor: Omer Adnan <omeradnan.yaqoob@gmail.com>\nDate:   Mon Oct 5 00:08:44 2026 +0500\n\n    Remove obsolete scratch file using git rm\n\n assignment_3/obsolete-scratch.txt | Bin 100 -> 0 bytes\n 1 file changed, 0 insertions(+), 0 deletions(-)\n delete mode 100644 assignment_3/obsolete-scratch.txt\n"
+    }
+  ]
+}

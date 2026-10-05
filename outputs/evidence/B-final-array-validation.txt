@@ -1,0 +1,11 @@
+Command: uv run python ../work/verify_arrays.py
+Working directory: C:\Work\uni\MLOPS\assignment_3
+Exit code: 0
+
+x_train (48000, 28, 28) float32
+y_train (48000,) uint8
+x_val (12000, 28, 28) float32
+y_val (12000,) uint8
+x_test (10000, 28, 28) float32
+y_test (10000,) uint8
+Verified image ranges, labels, all split sizes, 20 history epochs and test accuracy 88.43%.

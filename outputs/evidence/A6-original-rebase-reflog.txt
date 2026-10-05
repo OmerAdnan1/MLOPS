@@ -1,0 +1,24 @@
+Original local reflog: actual earlier rebase events
+Working directory: C:\Work\uni\MLOPS
+
+$ git reflog show dev --date=iso
+1fe74d3 dev@{2026-10-05 02:34:26 +0500}: commit: Increase dense units and reproduce v2 model
+6c475e9 dev@{2026-10-05 02:31:15 +0500}: commit: Define and reproduce four-stage DVC pipeline
+83b4064 dev@{2026-10-05 01:24:37 +0500}: commit: Track initial data models and reports with DVC
+48f54ee dev@{2026-10-05 01:14:08 +0500}: commit: Initialize assignment DVC subproject
+74fcdfb dev@{2026-10-05 00:39:35 +0500}: rebase (finish): refs/heads/dev onto 7553a8c37a8d7da4188a0e9742e7de41452265a7
+914cf04 dev@{2026-10-05 00:08:44 +0500}: commit: Remove obsolete scratch file using git rm
+dfc932d dev@{2026-10-05 00:08:33 +0500}: commit: Move project notes into docs using git mv
+344200d dev@{2026-10-05 00:07:28 +0500}: commit: Add project notes and temporary scratch file
+e37274c dev@{2026-10-04 23:46:02 +0500}: commit: Document preservation of raw dataset values
+c231abd dev@{2026-10-04 23:43:41 +0500}: commit: Implement test evaluation and confusion matrix generation
+312b0d2 dev@{2026-10-04 23:40:05 +0500}: commit: Trained a ANN
+443c03e dev@{2026-10-04 23:11:50 +0500}: commit: Document validation split after resuming stashed work
+99170bc dev@{2026-10-04 23:04:10 +0500}: commit: Implement normalized stratified train-validation preprocessing
+9dc285a dev@{2026-10-04 23:03:29 +0500}: commit: Implement Fashion-MNIST raw data preparation
+b35d279 dev@{2026-10-04 22:39:00 +0500}: commit: Define preprocessing and ANN training parameters
+a23f325 dev@{2026-10-04 22:27:05 +0500}: commit: Add assignment-specific ignore rules
+e26a18d dev@{2026-10-04 21:00:37 +0500}: merge main: Fast-forward
+6f50944 dev@{2026-10-04 20:19:25 +0500}: branch: Created from HEAD
+
+Exit code: 0

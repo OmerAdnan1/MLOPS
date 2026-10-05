@@ -1,0 +1,8 @@
+{
+  "label": "B-final-array-validation",
+  "captured_utc": "2026-10-05T06:23:27.307775+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS\\assignment_3",
+  "command": "uv run python ../work/verify_arrays.py",
+  "exit_code": 0,
+  "output": "x_train (48000, 28, 28) float32\r\ny_train (48000,) uint8\r\nx_val (12000, 28, 28) float32\r\ny_val (12000,) uint8\r\nx_test (10000, 28, 28) float32\r\ny_test (10000,) uint8\r\nVerified image ranges, labels, all split sizes, 20 history epochs and test accuracy 88.43%.\r\n"
+}

@@ -1,0 +1,23 @@
+{
+  "label": "A7-reset-hard-replay",
+  "provenance": "Reconstructed hard reset in isolated clone, disposable demo commit only",
+  "captured_utc": "2026-10-05T06:15:26.932498+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS\\work\\evidence-replay",
+  "commands": [
+    {
+      "command": "git reset --hard replay-reset-start",
+      "exit_code": 0,
+      "output": "HEAD is now at d5103f4 Evidence replay: temporary preparation comment\n"
+    },
+    {
+      "command": "git reset --hard HEAD~1",
+      "exit_code": 0,
+      "output": "HEAD is now at f83be74 Increase dense units and reproduce v2 model\n"
+    },
+    {
+      "command": "git status --short",
+      "exit_code": 0,
+      "output": ""
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "label": "A5-stash-replay",
+  "provenance": "Reconstructed preprocessing stash demonstration in isolated clone",
+  "captured_utc": "2026-10-05T06:16:29.463219+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS\\work\\evidence-replay",
+  "commands": [
+    {
+      "command": "git stash push -m \"Pause preprocessing edit for evidence replay\"",
+      "exit_code": 0,
+      "output": "warning: in the working copy of 'assignment_3/src/preprocess.py', LF will be replaced by CRLF the next time Git touches it\nSaved working directory and index state On dev: Pause preprocessing edit for evidence replay\n"
+    },
+    {
+      "command": "git stash list",
+      "exit_code": 0,
+      "output": "stash@{0}: On dev: Pause preprocessing edit for evidence replay\n"
+    },
+    {
+      "command": "git switch main",
+      "exit_code": 0,
+      "output": "Switched to branch 'main'\nYour branch and 'origin/main' have diverged,\nand have 2 and 4 different commits each, respectively.\n  (use \"git pull\" if you want to integrate the remote branch with yours)\n"
+    },
+    {
+      "command": "git switch dev",
+      "exit_code": 0,
+      "output": "Switched to branch 'dev'\n"
+    },
+    {
+      "command": "git stash pop",
+      "exit_code": 0,
+      "output": "On branch dev\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git restore <file>...\" to discard changes in working directory)\n\tmodified:   assignment_3/src/preprocess.py\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\nDropped refs/stash@{0} (6bd502988b3a26df9fb45a545445b3ef556d001d)\n"
+    },
+    {
+      "command": "git diff",
+      "exit_code": 0,
+      "output": "diff --git a/assignment_3/src/preprocess.py b/assignment_3/src/preprocess.py\nindex 709719d..4b02124 100644\n--- a/assignment_3/src/preprocess.py\n+++ b/assignment_3/src/preprocess.py\n@@ -53,4 +53,5 @@ if __name__ == \"__main__\":\n     main()\n \n \n-# Temporary note: validation is split from the training data.\n\\ No newline at end of file\n+# Temporary note: validation is split from the training data.\n+# Evidence replay: preprocessing edit paused for a branch switch.\n"
+    }
+  ]
+}

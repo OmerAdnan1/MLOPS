@@ -23,3 +23,6 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+
+# Local report-building and verification workspace
+/work/

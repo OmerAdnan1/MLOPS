@@ -1,0 +1,45 @@
+Current project output
+Working directory: C:\Work\uni\MLOPS\assignment_3
+
+$ uv run python src/preprocess.py
+Training images: (48000, 28, 28)
+Validation images: (12000, 28, 28)
+Test images: (10000, 28, 28)
+Processed image range: 0.0 to 1.0
+
+Exit code: 0
+
+$ uv run dvc add data/processed
+
+To track the changes with git, run:
+
+	git add 'data\processed.dvc'
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+Exit code: 0
+
+$ git add src/preprocess.py data/processed.dvc
+warning: in the working copy of 'assignment_3/src/preprocess.py', LF will be replaced by CRLF the next time Git touches it
+
+Exit code: 0
+
+$ uv run dvc checkout
+
+Exit code: 0
+
+$ uv run dvc repro
+Stage 'prepare' didn't change, skipping
+'data\processed.dvc' didn't change, skipping
+Stage 'train' didn't change, skipping
+Stage 'evaluate' didn't change, skipping
+Data and pipelines are up to date.
+
+Exit code: 0
+
+$ uv run dvc status
+Data and pipelines are up to date.
+
+Exit code: 0

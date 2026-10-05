@@ -1,0 +1,1 @@
+D3 and D4 logs were saved by the student during the original executions. Historical Git evidence is read directly from commits/tags/reflogs. Files labelled reconstructed are rerun demonstrations in an isolated clone. PNGs are readable renderings of genuine command output, not original IDE screenshots. Conflict and final-state records are captured during actual completion.

@@ -1,0 +1,17 @@
+Current project output
+Working directory: C:\Work\uni\MLOPS
+
+$ git log --oneline -- assignment_3/src assignment_3/params.yaml assignment_3/dvc.yaml
+dc670be Temporarily use processed-data pointer for conflict exercise
+1fe74d3 Increase dense units and reproduce v2 model
+6c475e9 Define and reproduce four-stage DVC pipeline
+ea07b7f Document preservation of raw dataset values
+bad2604 Implement test evaluation and confusion matrix generation
+3ade3fa Trained a ANN
+7a258f0 Document validation split after resuming stashed work
+c28f87d Implement normalized stratified train-validation preprocessing
+a9f715c Implement Fashion-MNIST raw data preparation
+8c3c43a Define preprocessing and ANN training parameters
+6f50944 Project Scaffold
+
+Exit code: 0

@@ -1,0 +1,23 @@
+{
+  "label": "D-v1-v2-metrics",
+  "provenance": "Current project output",
+  "captured_utc": "2026-10-05T06:14:22.146236+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS",
+  "commands": [
+    {
+      "command": "git show v1:assignment_3/metrics.json",
+      "exit_code": 0,
+      "output": "{\n  \"test_loss\": 0.3385728895664215,\n  \"test_accuracy\": 0.8837000131607056,\n  \"test_samples\": 10000\n}\n"
+    },
+    {
+      "command": "git show v2:assignment_3/metrics.json",
+      "exit_code": 0,
+      "output": "{\n  \"test_loss\": 0.34088870882987976,\n  \"test_accuracy\": 0.8842999935150146,\n  \"test_samples\": 10000\n}\n"
+    },
+    {
+      "command": "git diff v1 v2 -- assignment_3/params.yaml",
+      "exit_code": 0,
+      "output": "diff --git a/assignment_3/params.yaml b/assignment_3/params.yaml\nindex c6a1486..56cc89b 100644\n--- a/assignment_3/params.yaml\n+++ b/assignment_3/params.yaml\n@@ -3,7 +3,7 @@ preprocess:\n   seed: 42\n \n train:\n-  dense_units: 128\n+  dense_units: 256\n   dropout_rate: 0.2\n   learning_rate: 0.001\n   epochs: 20\n"
+    }
+  ]
+}

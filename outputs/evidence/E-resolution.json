@@ -1,0 +1,38 @@
+{
+  "label": "E-resolution",
+  "provenance": "Current project output",
+  "captured_utc": "2026-10-05T06:20:04.855658+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS\\assignment_3",
+  "commands": [
+    {
+      "command": "uv run python src/preprocess.py",
+      "exit_code": 0,
+      "output": "Training images: (48000, 28, 28)\r\nValidation images: (12000, 28, 28)\r\nTest images: (10000, 28, 28)\r\nProcessed image range: 0.0 to 1.0\r\n"
+    },
+    {
+      "command": "uv run dvc add data/processed",
+      "exit_code": 0,
+      "output": "\r\nTo track the changes with git, run:\r\n\r\n\tgit add 'data\\processed.dvc'\r\n\r\nTo enable auto staging, run:\r\n\r\n\tdvc config core.autostage true\r\n"
+    },
+    {
+      "command": "git add src/preprocess.py data/processed.dvc",
+      "exit_code": 0,
+      "output": "warning: in the working copy of 'assignment_3/src/preprocess.py', LF will be replaced by CRLF the next time Git touches it\n"
+    },
+    {
+      "command": "uv run dvc checkout",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "uv run dvc repro",
+      "exit_code": 0,
+      "output": "Stage 'prepare' didn't change, skipping\r\n'data\\processed.dvc' didn't change, skipping\r\nStage 'train' didn't change, skipping\r\nStage 'evaluate' didn't change, skipping\r\nData and pipelines are up to date.\r\n"
+    },
+    {
+      "command": "uv run dvc status",
+      "exit_code": 0,
+      "output": "Data and pipelines are up to date.\r\n"
+    }
+  ]
+}

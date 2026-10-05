@@ -1,0 +1,28 @@
+Original project commits: rename and deletion evidence
+Working directory: C:\Work\uni\MLOPS
+
+$ git show --summary --stat 7e814c0
+commit 7e814c04738c791accd4f39ed897794a136056ce
+Author: Omer Adnan <omeradnan.yaqoob@gmail.com>
+Date:   Mon Oct 5 00:08:33 2026 +0500
+
+    Move project notes into docs using git mv
+
+ assignment_3/{ => docs}/project-notes.txt | Bin
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename assignment_3/{ => docs}/project-notes.txt (100%)
+
+Exit code: 0
+
+$ git show --summary --stat 74fcdfb
+commit 74fcdfb1369575bce0c05d0f88e8bb6ace30715f
+Author: Omer Adnan <omeradnan.yaqoob@gmail.com>
+Date:   Mon Oct 5 00:08:44 2026 +0500
+
+    Remove obsolete scratch file using git rm
+
+ assignment_3/obsolete-scratch.txt | Bin 100 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 assignment_3/obsolete-scratch.txt
+
+Exit code: 0

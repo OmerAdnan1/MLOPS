@@ -1,0 +1,13 @@
+Current project output
+Working directory: C:\Work\uni\MLOPS\assignment_3
+
+$ uv run dvc remote list
+gdrive_storage  gdrive://1cWQ1aXsd-Ov_v3R9FreQfBMd-2wlOD0W      (default)
+gdriveremote    gdrive://1cWQ1aXsd-Ov_v3R9FreQfBMd-2wlOD0W
+
+Exit code: 0
+
+$ uv run dvc push -r gdrive_storage
+Everything is up to date.
+
+Exit code: 0

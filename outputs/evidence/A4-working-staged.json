@@ -1,0 +1,23 @@
+{
+  "label": "A4-working-staged",
+  "provenance": "Reconstructed demonstration in isolated clone: unstaged and staged edits",
+  "captured_utc": "2026-10-05T06:14:59.768427+00:00",
+  "cwd": "C:\\Work\\uni\\MLOPS\\work\\evidence-replay",
+  "commands": [
+    {
+      "command": "git diff",
+      "exit_code": 0,
+      "output": "warning: in the working copy of 'assignment_3/src/prepare.py', LF will be replaced by CRLF the next time Git touches it\ndiff --git a/assignment_3/src/prepare.py b/assignment_3/src/prepare.py\nindex 2b96706..5a02ae6 100644\n--- a/assignment_3/src/prepare.py\n+++ b/assignment_3/src/prepare.py\n@@ -24,4 +24,5 @@ if __name__ == \"__main__\":\n     main()\n \n # Temporary note: validation is split from the training data.\n-# Raw arrays preserve the original dataset values.\n\\ No newline at end of file\n+# Raw arrays preserve the original dataset values.\n+# Evidence replay: temporary edit to demonstrate Git diff.\n"
+    },
+    {
+      "command": "git add assignment_3/src/prepare.py",
+      "exit_code": 0,
+      "output": "warning: in the working copy of 'assignment_3/src/prepare.py', LF will be replaced by CRLF the next time Git touches it\n"
+    },
+    {
+      "command": "git diff --staged",
+      "exit_code": 0,
+      "output": "diff --git a/assignment_3/src/prepare.py b/assignment_3/src/prepare.py\nindex 2b96706..5a02ae6 100644\n--- a/assignment_3/src/prepare.py\n+++ b/assignment_3/src/prepare.py\n@@ -24,4 +24,5 @@ if __name__ == \"__main__\":\n     main()\n \n # Temporary note: validation is split from the training data.\n-# Raw arrays preserve the original dataset values.\n\\ No newline at end of file\n+# Raw arrays preserve the original dataset values.\n+# Evidence replay: temporary edit to demonstrate Git diff.\n"
+    }
+  ]
+}
